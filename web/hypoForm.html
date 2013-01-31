@@ -1,0 +1,34 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pythagorean Theorem</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function validateForm()
+{
+var x=document.forms["formTriangle"]["triA"].value;
+var y=document.forms["formTriangle"]["triB"].value;
+if (x==null || y==null || x=="" || y=="" || x<0 || y<0 || isNaN(x)==true || isNaN(y)==true)
+  {
+  alert("Input is invalid.");
+  return false;
+  }
+}
+</script>
+    </head>
+    <body>
+        <h1 align="center">Find the Hypotenuse of a Triangle</h1>
+        <form id="formTriangle" action="calcController" name="formTriangle" method="POST" onsubmit="return validateForm()">
+            
+            Side A:  <input type="number" id="triA" name="triA"><br />
+            Side B:  <input type="number" id="triB" name="triB">
+         </br></br>
+         <input type="submit" value="Calculate">
+         </br></br>
+        </form>
+    </body>
+</html>

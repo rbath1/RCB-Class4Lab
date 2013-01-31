@@ -1,0 +1,36 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+function validateForm()
+{
+var x=document.forms["formArea"]["length"].value;
+var y=document.forms["formArea"]["width"].value;
+if (x==null || y==null || x=="" || y=="" || x<0 || y<0 || isNaN(x)==true || isNaN(y)==true)
+  {
+  alert("Input is invalid.");
+  return false;
+  }
+ 
+}
+
+</script>
+    </head>
+    <body>
+         <h1 align="center">Calculate Area of a Rectangle/Square</h1>
+        <form id="formArea" action="calcController" name="formArea" method="POST" onsubmit="return validateForm()">
+            
+            length: <input type="number" id="length" name="length"><br />
+            width: <input type="number" id="width" name="width">
+         </br></br>
+         <input type="submit" value="Calculate">
+         </br></br>
+        </form>
+    </body>
+</html>
