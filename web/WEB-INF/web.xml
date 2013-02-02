@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>calcController</servlet-name>
-        <url-pattern>/calcController</url-pattern>
+        <url-pattern>/something.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
